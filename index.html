@@ -3,124 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Keysi Salcca Lagar</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>CV — Keysi Salcca Lagar</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --rosa-palido: #f7e8e8;
-    --rosa-medio: #e8c4c4;
-    --rosa-oscuro: #c97b7b;
-    --rosa-profundo: #a85454;
-    --blanco: #fff9f9;
-    --gris: #6b5555;
-    --texto: #3a2a2a;
-  }
-  body { font-family: 'Inter', sans-serif; background: var(--rosa-palido); color: var(--texto); min-height: 100vh; }
-  .hero { background: linear-gradient(135deg, #e8c4c4 0%, #f7e8e8 60%, #fce4ec 100%); padding: 60px 40px 50px; text-align: center; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 220px; height: 220px; border-radius: 50%; background: rgba(200,120,120,0.12); }
-  .hero::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(200,120,120,0.10); }
-  .avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--rosa-oscuro), var(--rosa-profundo)); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 48px; border: 4px solid white; box-shadow: 0 8px 30px rgba(168,84,84,0.25); position: relative; z-index: 1; }
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--rosa-profundo); margin-bottom: 8px; position: relative; z-index: 1; }
-  .hero .cargo { font-size: 0.95rem; color: var(--gris); font-weight: 300; letter-spacing: 0.05em; margin-bottom: 6px; position: relative; z-index: 1; }
-  .hero .uni { font-size: 0.85rem; color: var(--rosa-oscuro); font-weight: 500; position: relative; z-index: 1; }
-  .badge { display: inline-block; margin-top: 16px; background: var(--rosa-profundo); color: white; font-size: 0.78rem; padding: 5px 16px; border-radius: 20px; letter-spacing: 0.08em; font-weight: 500; position: relative; z-index: 1; }
-  .container { max-width: 720px; margin: 0 auto; padding: 40px 24px; display: flex; flex-direction: column; gap: 32px; }
-  .card { background: white; border-radius: 16px; padding: 28px; box-shadow: 0 2px 20px rgba(168,84,84,0.08); border-left: 4px solid var(--rosa-medio); }
-  .card h2 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--rosa-profundo); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
-  .sobre-mi p { font-size: 0.95rem; line-height: 1.8; color: var(--gris); }
-  .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-  .skill-tag { background: var(--rosa-palido); border: 1.5px solid var(--rosa-medio); color: var(--rosa-profundo); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; }
-  .skill-tag:hover { background: var(--rosa-oscuro); color: white; border-color: var(--rosa-oscuro); transform: translateY(-2px); }
-  .hobbies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
-  .hobby-item { background: var(--rosa-palido); border-radius: 12px; padding: 16px 12px; text-align: center; font-size: 0.85rem; color: var(--gris); }
-  .hobby-item .emoji { font-size: 1.6rem; display: block; margin-bottom: 6px; }
-  .valores-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-  .valor { display: flex; align-items: center; gap: 8px; background: var(--rosa-palido); padding: 8px 16px; border-radius: 10px; font-size: 0.88rem; color: var(--texto); }
-  .valor span.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rosa-oscuro); flex-shrink: 0; }
-  .redes { display: flex; flex-direction: column; gap: 12px; }
-  .red-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--rosa-palido); border-radius: 10px; text-decoration: none; color: var(--texto); font-size: 0.9rem; transition: all 0.2s; border: 1.5px solid transparent; }
-  .red-link:hover { border-color: var(--rosa-oscuro); background: white; transform: translateX(4px); }
-  .red-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; background: var(--rosa-medio); flex-shrink: 0; }
-  .red-info { flex: 1; }
-  .red-info .label { font-size: 0.75rem; color: var(--gris); }
-  .red-info .value { font-weight: 500; color: var(--texto); }
-  footer { text-align: center; padding: 24px; font-size: 0.78rem; color: var(--rosa-oscuro); opacity: 0.7; }
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --rosa: #b56060;
+  --rosa-claro: #f0d4d4;
+  --rosa-palido: #faf3f3;
+  --rosa-oscuro: #8a3a3a;
+  --gris: #5a4040;
+  --gris2: #8a7070;
+  --texto: #2a1a1a;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #f0e0e0;
+  display: flex; justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh; padding: 40px 20px;
+}
+.cv {
+  width: 820px; background: white;
+  box-shadow: 0 20px 60px rgba(138,58,58,0.15);
+  border-radius: 4px; overflow: hidden;
+  display: grid; grid-template-columns: 260px 1fr;
+}
+.sidebar {
+  background: var(--rosa-oscuro);
+  padding: 44px 28px; color: white;
+}
+.foto-wrap {
+  width: 110px; height: 110px; border-radius: 50%;
+  background: var(--rosa);
+  border: 4px solid rgba(255,255,255,0.3);
+  margin: 0 auto 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem; font-weight: 700; color: white;
+  overflow: hidden;
+}
+.foto-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.sidebar-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 700;
+  text-align: center; margin-bottom: 4px; line-height: 1.2;
+}
+.sidebar-cargo {
+  font-size: 0.73rem; text-align: center;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 32px; letter-spacing: 0.04em;
+}
+.sidebar-section { margin-bottom: 26px; }
+.sidebar-title {
+  font-size: 0.62rem; letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 6px; margin-bottom: 14px;
+}
+.contact-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.78rem; color: rgba(255,255,255,0.82);
+  margin-bottom: 10px; line-height: 1.5;
+}
+.contact-icon { font-size: 0.85rem; margin-top: 1px; flex-shrink: 0; }
+.skill-tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
+.skill-pill {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+  padding: 4px 12px; border-radius: 14px;
+  font-size: 0.75rem;
+}
+.idioma {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.78rem; color: rgba(255,255,255,0.82);
+  margin-bottom: 10px;
+}
+.idioma-dots { display: flex; gap: 4px; }
+.idioma-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+.idioma-dot.filled { background: rgba(255,255,255,0.8); }
+.main { padding: 44px 36px; background: white; }
+.main-header {
+  border-bottom: 2px solid var(--rosa-claro);
+  padding-bottom: 18px; margin-bottom: 26px;
+}
+.main-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.3rem; font-weight: 700;
+  color: var(--rosa-oscuro); line-height: 1.1;
+}
+.main-cargo {
+  font-size: 0.82rem; color: var(--gris2);
+  font-weight: 300; letter-spacing: 0.06em; margin-top: 4px;
+}
+.main-section { margin-bottom: 24px; }
+.main-title {
+  font-size: 0.62rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--rosa);
+  border-left: 3px solid var(--rosa);
+  padding-left: 10px; margin-bottom: 12px; font-weight: 500;
+}
+.sobre { font-size: 0.84rem; line-height: 1.8; color: var(--gris); }
+.timeline-item { margin-bottom: 16px; }
+.timeline-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; margin-bottom: 2px;
+}
+.timeline-titulo { font-size: 0.88rem; font-weight: 500; color: var(--texto); }
+.timeline-fecha {
+  font-size: 0.7rem; color: var(--rosa);
+  background: var(--rosa-palido);
+  padding: 2px 10px; border-radius: 10px;
+  white-space: nowrap; flex-shrink: 0;
+}
+.timeline-lugar { font-size: 0.76rem; color: var(--gris2); margin-bottom: 4px; }
+.timeline-desc { font-size: 0.78rem; color: var(--gris); line-height: 1.7; }
+.soft-grid { display: flex; flex-wrap: wrap; gap: 7px; }
+.soft-tag {
+  background: var(--rosa-palido);
+  border: 1px solid var(--rosa-claro);
+  color: var(--rosa-oscuro);
+  padding: 4px 13px; border-radius: 14px;
+  font-size: 0.76rem; font-weight: 500;
+}
+@media print {
+  body { background: white; padding: 0; }
+  .cv { box-shadow: none; }
+}
 </style>
 </head>
 <body>
-<div class="hero">
-  <div class="avatar">👩‍🎓</div>
-  <h1>Keysi Salcca Lagar</h1>
-  <p class="cargo">Estudiante de Ingeniería Estadística e Informática</p>
-  <p class="uni">Universidad Nacional del Altiplano — Puno, Perú</p>
-  <span class="badge">✨ Responsable · Trabajo en equipo · Comprometida</span>
+<div class="cv">
+  <div class="sidebar">
+    <div class="foto-wrap">KS</div>
+    <div class="sidebar-name">Keysi Salcca Lagar</div>
+    <div class="sidebar-cargo">Estudiante · Ing. Estadística e Informática</div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Contacto</div>
+      <div class="contact-item"><span class="contact-icon">📍</span> Puno, Perú</div>
+      <div class="contact-item"><span class="contact-icon">📧</span> keysi.salcca@est.unap.edu.pe</div>
+      <div class="contact-item"><span class="contact-icon">📱</span> +51 987 654 321</div>
+      <div class="contact-item"><span class="contact-icon">🐙</span> github.com/keysilagar558-max</div>
+      <div class="contact-item"><span class="contact-icon">📸</span> @keysi_salcca</div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Habilidades</div>
+      <div class="skill-tag-list">
+        <span class="skill-pill">Excel</span>
+        <span class="skill-pill">SPSS</span>
+        <span class="skill-pill">Minitab</span>
+        <span class="skill-pill">EViews</span>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">GitHub</span>
+        <span class="skill-pill">Estadística</span>
+        <span class="skill-pill">Series de Tiempo</span>
+        <span class="skill-pill">Regresión</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Idiomas</div>
+      <div class="idioma">Español
+        <div class="idioma-dots">
+          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
+          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
+          <div class="idioma-dot filled"></div>
+        </div>
+      </div>
+      <div class="idioma">Quechua
+        <div class="idioma-dots">
+          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
+          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
+          <div class="idioma-dot"></div>
+        </div>
+      </div>
+      <div class="idioma">Inglés
+        <div class="idioma-dots">
+          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
+          <div class="idioma-dot filled"></div><div class="idioma-dot"></div>
+          <div class="idioma-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="main-header">
+      <div class="main-name">Keysi Salcca<br>Lagar</div>
+      <div class="main-cargo">Ingeniería Estadística e Informática · VI Semestre</div>
+    </div>
+
+    <div class="main-section">
+      <div class="main-title">Perfil profesional</div>
+      <p class="sobre">Estudiante de VI semestre de Ingeniería Estadística e Informática en la Universidad Nacional del Altiplano de Puno. Con formación en análisis estadístico, series de tiempo, econometría y programación aplicada. Persona responsable, puntual y comprometida, con capacidad para trabajar en equipo y orientada a la investigación cuantitativa.</p>
+    </div>
+
+    <div class="main-section">
+      <div class="main-title">Educación</div>
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <div class="timeline-titulo">Ingeniería Estadística e Informática</div>
+          <div class="timeline-fecha">2022 — Actualidad</div>
+        </div>
+        <div class="timeline-lugar">Universidad Nacional del Altiplano — Puno, Perú</div>
+        <div class="timeline-desc">VI Semestre. Cursos: Econometría, Series de Tiempo, Regresión, Machine Learning, Redes y Telecomunicaciones.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <div class="timeline-titulo">Educación Secundaria</div>
+          <div class="timeline-fecha">2017 — 2021</div>
+        </div>
+        <div class="timeline-lugar">I.E. San Francisco de Borja — Puno</div>
+        <div class="timeline-desc">Graduada con mención en Ciencias.</div>
+      </div>
+    </div>
+
+    <div class="main-section">
+      <div class="main-title">Proyectos</div>
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <div class="timeline-titulo">Investigación: Estrés y Comodidad en Parques</div>
+          <div class="timeline-fecha">2025 — 2026</div>
+        </div>
+        <div class="timeline-lugar">UNA Puno · Proyecto de tesis</div>
+        <div class="timeline-desc">Análisis estadístico de percepción (estrés, comodidad, ruido) en 4 parques de Puno usando SPSS, Minitab y Correlación de Pearson.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <div class="timeline-titulo">Apoyo en análisis de datos</div>
+          <div class="timeline-fecha">2025</div>
+        </div>
+        <div class="timeline-lugar">UNA Puno</div>
+        <div class="timeline-desc">Colaboración en modelos SARIMA aplicados a datos de criminalidad y comercio informal en Puno y Lima.</div>
+      </div>
+    </div>
+
+    <div class="main-section">
+      <div class="main-title">Competencias personales</div>
+      <div class="soft-grid">
+        <span class="soft-tag">Responsabilidad</span>
+        <span class="soft-tag">Trabajo en equipo</span>
+        <span class="soft-tag">Puntualidad</span>
+        <span class="soft-tag">Compromiso</span>
+        <span class="soft-tag">Honestidad</span>
+        <span class="soft-tag">Proactividad</span>
+        <span class="soft-tag">Comunicación</span>
+        <span class="soft-tag">Adaptabilidad</span>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="container">
-  <div class="card sobre-mi">
-    <h2>🌸 Sobre mí</h2>
-    <p>Soy estudiante de la Facultad de Ingeniería Estadística e Informática en la UNA Puno. Me apasiona el análisis de datos y la investigación estadística aplicada. Soy una persona responsable, comprometida con mis metas y con gran capacidad para trabajar en equipo. Siempre busco aprender y mejorar en cada proyecto que emprendo.</p>
-  </div>
-  <div class="card">
-    <h2>💡 Habilidades</h2>
-    <div class="skills-grid">
-      <span class="skill-tag">SPSS</span>
-      <span class="skill-tag">Minitab</span>
-      <span class="skill-tag">Excel</span>
-      <span class="skill-tag">EViews</span>
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">Estadística</span>
-      <span class="skill-tag">Análisis de datos</span>
-      <span class="skill-tag">Series de tiempo</span>
-      <span class="skill-tag">Regresión</span>
-      <span class="skill-tag">Investigación</span>
-      <span class="skill-tag">GitHub</span>
-      <span class="skill-tag">Trabajo en equipo</span>
-    </div>
-  </div>
-  <div class="card">
-    <h2>🎀 Hobbies</h2>
-    <div class="hobbies-grid">
-      <div class="hobby-item"><span class="emoji">📊</span>Análisis de datos</div>
-      <div class="hobby-item"><span class="emoji">📚</span>Lectura</div>
-      <div class="hobby-item"><span class="emoji">🎵</span>Música</div>
-      <div class="hobby-item"><span class="emoji">🌿</span>Naturaleza</div>
-      <div class="hobby-item"><span class="emoji">✈️</span>Viajes</div>
-      <div class="hobby-item"><span class="emoji">💻</span>Programación</div>
-    </div>
-  </div>
-  <div class="card">
-    <h2>🌷 Valores</h2>
-    <div class="valores-grid">
-      <div class="valor"><span class="dot"></span>Responsabilidad</div>
-      <div class="valor"><span class="dot"></span>Trabajo en equipo</div>
-      <div class="valor"><span class="dot"></span>Compromiso</div>
-      <div class="valor"><span class="dot"></span>Puntualidad</div>
-      <div class="valor"><span class="dot"></span>Honestidad</div>
-      <div class="valor"><span class="dot"></span>Superación</div>
-    </div>
-  </div>
-  <div class="card">
-    <h2>🔗 Encuéntrame en</h2>
-    <div class="redes">
-      <a class="red-link" href="https://github.com/keysilagar558-max" target="_blank">
-        <div class="red-icon">🐙</div>
-        <div class="red-info"><div class="label">GitHub</div><div class="value">keysilagar558-max</div></div>
-        <span>→</span>
-      </a>
-      <a class="red-link" href="#" target="_blank">
-        <div class="red-icon">💼</div>
-        <div class="red-info"><div class="label">LinkedIn</div><div class="value">Keysi Salcca Lagar</div></div>
-        <span>→</span>
-      </a>
-      <a class="red-link" href="#" target="_blank">
-        <div class="red-icon">📸</div>
-        <div class="red-info"><div class="label">Instagram</div><div class="value">@keysi</div></div>
-        <span>→</span>
-      </a>
-    </div>
-  </div>
-</div>
-<footer>Hecho con 🌸 · Keysi Salcca Lagar · UNA Puno 2026</footer>
 </body>
 </html>
