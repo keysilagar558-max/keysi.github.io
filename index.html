@@ -1,249 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M.Sc. Romel Percy Melgarejo Bolivar | Perfil Profesional y Académico</title>
-    <style>
-        :root {
-            --primary: #1e3a8a;
-            --secondary: #0284c7;
-            --dark: #1f2937;
-            --light: #f3f4f6;
-            --white: #ffffff;
-            --accent: #f59e0b;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--dark);
-            background-color: var(--light);
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 4rem 1rem;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .container {
-            max-width: 950px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        section {
-            background-color: var(--white);
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: var(--primary);
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 0.4rem;
-            margin-bottom: 1.2rem;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-        ul {
-            list-style-type: none;
-        }
-        li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .badge {
-            background-color: var(--light);
-            color: var(--primary);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 0.3rem;
-        }
-        .project-title {
-            font-weight: bold;
-            color: var(--dark);
-        }
-        .btn-verify {
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin-top: 0.5rem;
-            transition: background-color 0.3s;
-        }
-        .btn-verify:hover {
-            background-color: var(--secondary);
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-        }
-        @media (max-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-        }
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            font-size: 0.9rem;
-            color: #6b7280;
-            background-color: #e5e7eb;
-            margin-top: 3rem;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keysi Salcca Lagar</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --rosa-palido: #f7e8e8;
+    --rosa-medio: #e8c4c4;
+    --rosa-oscuro: #c97b7b;
+    --rosa-profundo: #a85454;
+    --blanco: #fff9f9;
+    --gris: #6b5555;
+    --texto: #3a2a2a;
+  }
+  body { font-family: 'Inter', sans-serif; background: var(--rosa-palido); color: var(--texto); min-height: 100vh; }
+  .hero { background: linear-gradient(135deg, #e8c4c4 0%, #f7e8e8 60%, #fce4ec 100%); padding: 60px 40px 50px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 220px; height: 220px; border-radius: 50%; background: rgba(200,120,120,0.12); }
+  .hero::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(200,120,120,0.10); }
+  .avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--rosa-oscuro), var(--rosa-profundo)); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 48px; border: 4px solid white; box-shadow: 0 8px 30px rgba(168,84,84,0.25); position: relative; z-index: 1; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--rosa-profundo); margin-bottom: 8px; position: relative; z-index: 1; }
+  .hero .cargo { font-size: 0.95rem; color: var(--gris); font-weight: 300; letter-spacing: 0.05em; margin-bottom: 6px; position: relative; z-index: 1; }
+  .hero .uni { font-size: 0.85rem; color: var(--rosa-oscuro); font-weight: 500; position: relative; z-index: 1; }
+  .badge { display: inline-block; margin-top: 16px; background: var(--rosa-profundo); color: white; font-size: 0.78rem; padding: 5px 16px; border-radius: 20px; letter-spacing: 0.08em; font-weight: 500; position: relative; z-index: 1; }
+  .container { max-width: 720px; margin: 0 auto; padding: 40px 24px; display: flex; flex-direction: column; gap: 32px; }
+  .card { background: white; border-radius: 16px; padding: 28px; box-shadow: 0 2px 20px rgba(168,84,84,0.08); border-left: 4px solid var(--rosa-medio); }
+  .card h2 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--rosa-profundo); margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
+  .sobre-mi p { font-size: 0.95rem; line-height: 1.8; color: var(--gris); }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skill-tag { background: var(--rosa-palido); border: 1.5px solid var(--rosa-medio); color: var(--rosa-profundo); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; }
+  .skill-tag:hover { background: var(--rosa-oscuro); color: white; border-color: var(--rosa-oscuro); transform: translateY(-2px); }
+  .hobbies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+  .hobby-item { background: var(--rosa-palido); border-radius: 12px; padding: 16px 12px; text-align: center; font-size: 0.85rem; color: var(--gris); }
+  .hobby-item .emoji { font-size: 1.6rem; display: block; margin-bottom: 6px; }
+  .valores-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .valor { display: flex; align-items: center; gap: 8px; background: var(--rosa-palido); padding: 8px 16px; border-radius: 10px; font-size: 0.88rem; color: var(--texto); }
+  .valor span.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rosa-oscuro); flex-shrink: 0; }
+  .redes { display: flex; flex-direction: column; gap: 12px; }
+  .red-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--rosa-palido); border-radius: 10px; text-decoration: none; color: var(--texto); font-size: 0.9rem; transition: all 0.2s; border: 1.5px solid transparent; }
+  .red-link:hover { border-color: var(--rosa-oscuro); background: white; transform: translateX(4px); }
+  .red-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; background: var(--rosa-medio); flex-shrink: 0; }
+  .red-info { flex: 1; }
+  .red-info .label { font-size: 0.75rem; color: var(--gris); }
+  .red-info .value { font-weight: 500; color: var(--texto); }
+  footer { text-align: center; padding: 24px; font-size: 0.78rem; color: var(--rosa-oscuro); opacity: 0.7; }
+</style>
 </head>
 <body>
-
-    <header>
-        <h1>M.Sc. Romel Percy Melgarejo Bolivar</h1>
-        <p>Ingeniero Estadístico e Informático | Especialista en TI, Ciencia de Datos y Docencia Universitaria</p>
-    </header>
-
-    <div class="container">
-        
-        <!-- SECCIÓN 1: RESUMEN EJECUTIVO -->
-        <section id="resumen">
-            <h2>📝 Resumen Profesional</h2>
-            <p>Profesional peruano de la ingeniería con competencias avanzadas en Ciencia de Datos, redes telemáticas, tecnologías Web y simulación de entornos tridimensionales. Sólido trasfondo en la investigación científica aplicada al ámbito de la salud y educación, respaldado por la dirección de proyectos y cargos de liderazgo institucional en la región Puno [CTI Vitae - CONCYTEC].</p>
-        </section>
-
-        <!-- SECCIÓN 2: FORMACIÓN ACADÉMICA Y IDIOMAS (DISEÑO EN CUADRÍCULA) -->
-        <div class="grid-2">
-            <section id="educacion">
-                <h2>🎓 Formación Superior</h2>
-                <ul>
-                    <li>
-                        <strong>Magíster Scientiae en Informática</strong><br>
-                        Mención en Gerencia de TIC — Universidad Nacional del Altiplano [CTI Vitae - CONCYTEC]
-                    </li>
-                    <li>
-                        <strong>Ingeniero Estadístico e Informático</strong><br>
-                        Título Profesional — Universidad Nacional del Altiplano [CTI Vitae - CONCYTEC]
-                    </li>
-                    <li>
-                        <strong>Bachiller en Ciencias Estadísticas e Informática</strong><br>
-                        Grado Académico — Universidad Nacional del Altiplano [CTI Vitae - CONCYTEC]
-                    </li>
-                    <li>
-                        <strong>Especialidad en Mecatrónica Automotriz</strong><br>
-                        Estudios Técnicos — I.S.T. José Antonio Encinas (Puno)
-                    </li>
-                </ul>
-            </section>
-
-            <section id="idiomas">
-                <h2>🌐 Competencias Lingüísticas</h2>
-                <ul>
-                    <li><strong>Quechua:</strong> Lengua Nativa (Nivel Avanzado)</li>
-                    <li><strong>Inglés:</strong> Nivel Intermedio (Lectura y Escritura)</li>
-                    <li><strong>Portugués:</strong> Nivel Intermedio (Certificado de Suficiencia)</li>
-                </ul>
-                <br>
-                <div style="text-align: center;">
-                    <a href="https://concytec.gob.pe" target="_blank" class="btn-verify">
-                        ✓ Verificar Perfil Oficial CONCYTEC
-                    </a>
-                </div>
-            </section>
-        </div>
-
-        <!-- SECCIÓN 3: EXPERIENCIA INSTITUCIONAL -->
-        <section id="experiencia">
-            <h2>💼 Experiencia Laboral e Institucional</h2>
-            <ul>
-                <li>
-                    <strong>Presidente del Capítulo de Ingenieros Estadísticos e Informáticos</strong><br>
-                    Colegio de Ingenieros del Perú — Consejo Departamental Puno
-                    <br><span class="badge">Octubre 2022 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Docente Universitario Ordinario / Investigador</strong><br>
-                    Universidad Nacional del Altiplano Puno (UNA Puno)
-                    <br><span class="badge">2020 - Actualidad</span>
-                </li>
-                <li>
-                    <strong>Docente Auxiliar Ordinario</strong><br>
-                    Universidad Nacional de Moquegua (UNAM) [CTI Vitae - CONCYTEC]
-                </li>
-            </ul>
-        </section>
-
-        <!-- SECCIÓN 4: PROPIEDAD INTELECTUAL -->
-        <section id="propiedad-intelectual">
-            <h2>🛠️ Registro de Software y Patentes (INDECOPI)</h2>
-            <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1rem;">Soluciones tecnológicas y sistemas con derechos de autor reconocidos por el Estado Peruano:</p>
-            <ul>
-                <li>
-                    <span class="project-title">Criptologin</span> — Módulo integrable de validación de usuarios mediante token USB DNI electrónico (Reg. 31152022) [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <span class="project-title">Enviromaker</span> — Software de procesamiento y generación de ambientes tridimensionales (Reg. 31132022) [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <span class="project-title">GLPAK GUI</span> — Interfaz gráfica para renderizado 3D en ventanas Win GDI+ (Reg. 31122022) [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <span class="project-title">Plataforma de Certificación Electrónica</span> — Desarrollo arquitectónico de software para emisión de firmas seguras (Reg. 1382017) [CTI Vitae - CONCYTEC].
-                </li>
-            </ul>
-        </section>
-
-        <!-- SECCIÓN 5: PRODUCCIÓN CIENTÍFICA -->
-        <section id="investigacion">
-            <h2>🔬 Producción Científica e Investigación</h2>
-            <ul>
-                <li>
-                    <strong>Capítulo de Libro (2023):</strong> "Predicción de diabetes en mujeres mediante un modelo probabilístico basado en Redes Bayesianas" en la publicación internacional <em>O Cuidado em Saúde Baseado em Evidências</em> [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <strong>Artículo de Revista (2022):</strong> "Arquitectura pervasiva con tecnologías WebRTC híbridas para el desarrollo de un framework Modelo Vista Controlador de tiempo real" [CTI Vitae - CONCYTEC].
-                </li>
-                <li>
-                    <strong>Tesis de Postgrado (2021):</strong> "Redes privadas virtuales multimedia y su influencia en la seguridad de la información" — Universidad Nacional del Altiplano.
-                </li>
-            </ul>
-            
-            <!-- CONTENEDOR DE ENLACES DE VERIFICACIÓN -->
+<div class="hero">
+  <div class="avatar">👩‍🎓</div>
+  <h1>Keysi Salcca Lagar</h1>
+  <p class="cargo">Estudiante de Ingeniería Estadística e Informática</p>
+  <p class="uni">Universidad Nacional del Altiplano — Puno, Perú</p>
+  <span class="badge">✨ Responsable · Trabajo en equipo · Comprometida</span>
+</div>
+<div class="container">
+  <div class="card sobre-mi">
+    <h2>🌸 Sobre mí</h2>
+    <p>Soy estudiante de la Facultad de Ingeniería Estadística e Informática en la UNA Puno. Me apasiona el análisis de datos y la investigación estadística aplicada. Soy una persona responsable, comprometida con mis metas y con gran capacidad para trabajar en equipo. Siempre busco aprender y mejorar en cada proyecto que emprendo.</p>
+  </div>
+  <div class="card">
+    <h2>💡 Habilidades</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">SPSS</span>
+      <span class="skill-tag">Minitab</span>
+      <span class="skill-tag">Excel</span>
+      <span class="skill-tag">EViews</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">Estadística</span>
+      <span class="skill-tag">Análisis de datos</span>
+      <span class="skill-tag">Series de tiempo</span>
+      <span class="skill-tag">Regresión</span>
+      <span class="skill-tag">Investigación</span>
+      <span class="skill-tag">GitHub</span>
+      <span class="skill-tag">Trabajo en equipo</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🎀 Hobbies</h2>
+    <div class="hobbies-grid">
+      <div class="hobby-item"><span class="emoji">📊</span>Análisis de datos</div>
+      <div class="hobby-item"><span class="emoji">📚</span>Lectura</div>
+      <div class="hobby-item"><span class="emoji">🎵</span>Música</div>
+      <div class="hobby-item"><span class="emoji">🌿</span>Naturaleza</div>
+      <div class="hobby-item"><span class="emoji">✈️</span>Viajes</div>
+      <div class="hobby-item"><span class="emoji">💻</span>Programación</div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🌷 Valores</h2>
+    <div class="valores-grid">
+      <div class="valor"><span class="dot"></span>Responsabilidad</div>
+      <div class="valor"><span class="dot"></span>Trabajo en equipo</div>
+      <div class="valor"><span class="dot"></span>Compromiso</div>
+      <div class="valor"><span class="dot"></span>Puntualidad</div>
+      <div class="valor"><span class="dot"></span>Honestidad</div>
+      <div class="valor"><span class="dot"></span>Superación</div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🔗 Encuéntrame en</h2>
+    <div class="redes">
+      <a class="red-link" href="https://github.com/keysilagar558-max" target="_blank">
+        <div class="red-icon">🐙</div>
+        <div class="red-info"><div class="label">GitHub</div><div class="value">keysilagar558-max</div></div>
+        <span>→</span>
+      </a>
+      <a class="red-link" href="#" target="_blank">
+        <div class="red-icon">💼</div>
+        <div class="red-info"><div class="label">LinkedIn</div><div class="value">Keysi Salcca Lagar</div></div>
+        <span>→</span>
+      </a>
+      <a class="red-link" href="#" target="_blank">
+        <div class="red-icon">📸</div>
+        <div class="red-info"><div class="label">Instagram</div><div class="value">@keysi</div></div>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</div>
+<footer>Hecho con 🌸 · Keysi Salcca Lagar · UNA Puno 2026</footer>
+</body>
+</html>
