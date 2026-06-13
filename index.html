@@ -15,10 +15,8 @@ body {
   padding: 40px 20px;
 }
 .cv {
-  width: 750px;
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
+  width: 750px; background: white;
+  border-radius: 16px; overflow: hidden;
   box-shadow: 0 8px 40px rgba(120,60,60,0.15);
 }
 .header {
@@ -27,8 +25,7 @@ body {
   display: flex; align-items: center; gap: 32px;
 }
 .avatar {
-  width: 100px; height: 100px;
-  border-radius: 50%;
+  width: 100px; height: 100px; border-radius: 50%;
   background: #c47a7a;
   border: 3px solid rgba(255,255,255,0.4);
   display: flex; align-items: flex-end; justify-content: center;
@@ -37,80 +34,59 @@ body {
 .header-text { color: white; }
 .nombre {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.4rem; line-height: 1.1;
-  margin-bottom: 4px;
+  font-size: 2.4rem; line-height: 1.1; margin-bottom: 4px;
 }
 .cargo {
   font-size: 0.75rem; letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 12px;
+  color: rgba(255,255,255,0.7); margin-bottom: 12px;
 }
 .tags { display: flex; gap: 8px; flex-wrap: wrap; }
 .tag {
   background: rgba(255,255,255,0.15);
   border: 1px solid rgba(255,255,255,0.25);
   color: rgba(255,255,255,0.9);
-  padding: 3px 12px; border-radius: 12px;
-  font-size: 0.7rem;
+  padding: 3px 12px; border-radius: 12px; font-size: 0.7rem;
 }
-.body {
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-}
+.body { display: grid; grid-template-columns: 1fr 1.4fr; }
 .sidebar {
-  background: #fdf5f5;
-  padding: 32px 28px;
+  background: #fdf5f5; padding: 32px 28px;
   border-right: 1px solid #f0dada;
 }
-.s-block { margin-bottom: 28px; }
+.s-block { margin-bottom: 26px; }
 .s-title {
   font-size: 0.6rem; letter-spacing: 0.2em;
   text-transform: uppercase; font-weight: 600;
   color: #9a4a4a; margin-bottom: 12px;
-  padding-bottom: 5px;
-  border-bottom: 1.5px solid #e8c8c8;
+  padding-bottom: 5px; border-bottom: 1.5px solid #e8c8c8;
 }
 .s-line {
   font-size: 0.75rem; color: #5a3535;
   margin-bottom: 8px; line-height: 1.6;
   display: flex; gap: 8px; align-items: flex-start;
 }
-.s-line .ico { flex-shrink: 0; }
 .skill-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
 .skill {
-  background: #f0dada;
-  color: #7a3535;
+  background: #f0dada; color: #7a3535;
   padding: 3px 11px; border-radius: 10px;
   font-size: 0.7rem; font-weight: 500;
 }
 .main { padding: 32px 32px; }
-.m-block { margin-bottom: 24px; }
+.m-block { margin-bottom: 22px; }
 .m-title {
   font-size: 0.6rem; letter-spacing: 0.2em;
   text-transform: uppercase; font-weight: 600;
   color: #9a4a4a; margin-bottom: 12px;
-  padding-bottom: 5px;
-  border-bottom: 1.5px solid #e8c8c8;
+  padding-bottom: 5px; border-bottom: 1.5px solid #e8c8c8;
 }
-.item { margin-bottom: 14px; }
-.item-titulo {
-  font-size: 0.85rem; font-weight: 600;
-  color: #3a1515; margin-bottom: 1px;
-}
-.item-sub {
-  font-size: 0.7rem; color: #9a7070;
-  margin-bottom: 5px; font-weight: 400;
-}
-.item-desc {
-  font-size: 0.73rem; color: #5a3535;
-  line-height: 1.7;
-}
+.item { margin-bottom: 12px; }
+.item-titulo { font-size: 0.85rem; font-weight: 600; color: #3a1515; margin-bottom: 1px; }
+.item-sub { font-size: 0.7rem; color: #9a7070; margin-bottom: 4px; }
+.item-desc { font-size: 0.73rem; color: #5a3535; line-height: 1.7; }
 .bullet-list { list-style: none; }
 .bullet-list li {
   font-size: 0.73rem; color: #5a3535;
-  line-height: 1.7; padding-left: 12px;
-  position: relative;
+  line-height: 1.7; padding-left: 12px; position: relative;
 }
 .bullet-list li::before {
   content: '·'; position: absolute; left: 0;
@@ -164,15 +140,17 @@ body {
     <div class="sidebar">
       <div class="s-block">
         <div class="s-title">Contacto</div>
-        <div class="s-line"><span class="ico">📧</span> keysilagar558@gmail.com</div>
-        <div class="s-line"><span class="ico">📱</span> 970 239 921</div>
-        <div class="s-line"><span class="ico">🐙</span> github.com/keysilagar558-max</div>
-        <div class="s-line"><span class="ico">📍</span> Puno, Perú</div>
+        <div class="s-line">📧 keysilagar558@gmail.com</div>
+        <div class="s-line">📱 970 239 921</div>
+        <div class="s-line">🐙 github.com/keysilagar558-max</div>
+        <div class="s-line">📍 Puno, Perú</div>
       </div>
       <div class="s-block">
         <div class="s-title">Habilidades</div>
         <div class="skill-wrap">
           <span class="skill">Excel</span>
+          <span class="skill">Word</span>
+          <span class="skill">PowerPoint</span>
           <span class="skill">SPSS</span>
           <span class="skill">Minitab</span>
           <span class="skill">EViews</span>
@@ -183,17 +161,26 @@ body {
         </div>
       </div>
       <div class="s-block">
+        <div class="s-title">Fortalezas</div>
+        <div class="s-line">· Responsabilidad y puntualidad</div>
+        <div class="s-line">· Trabajo en equipo</div>
+        <div class="s-line">· Capacidad de análisis</div>
+        <div class="s-line">· Aprendizaje rápido</div>
+        <div class="s-line">· Comunicación efectiva</div>
+      </div>
+      <div class="s-block">
+        <div class="s-title">Hobbies</div>
+        <div class="s-line">🎵 Música</div>
+        <div class="s-line">📚 Lectura</div>
+        <div class="s-line">✈️ Viajes</div>
+        <div class="s-line">💻 Programación</div>
+        <div class="s-line">🌿 Naturaleza</div>
+      </div>
+      <div class="s-block">
         <div class="s-title">Idiomas</div>
         <div class="s-line">🇵🇪 Español — Nativo</div>
         <div class="s-line">🌿 Quechua — Avanzado</div>
         <div class="s-line">🇺🇸 Inglés — Intermedio</div>
-      </div>
-      <div class="s-block">
-        <div class="s-title">Valores</div>
-        <div class="s-line">· Responsabilidad</div>
-        <div class="s-line">· Trabajo en equipo</div>
-        <div class="s-line">· Compromiso</div>
-        <div class="s-line">· Puntualidad</div>
       </div>
     </div>
 
@@ -203,43 +190,43 @@ body {
         <p class="item-desc">Estudiante de VI semestre apasionada por el análisis de datos y la investigación estadística. Responsable, proactiva y comprometida con cada proyecto que emprendo.</p>
       </div>
       <div class="m-block">
-        <div class="m-title">Educación</div>
+        <div class="m-title">Formación académica</div>
         <div class="item">
           <div class="item-titulo">Ing. Estadística e Informática</div>
           <div class="item-sub">Universidad Nacional del Altiplano · Puno · 2023 — Actualidad</div>
-          <div class="item-desc">VI Semestre. Econometría, Series de Tiempo, Machine Learning, Regresión.</div>
+          <div class="item-desc">VI Semestre.</div>
         </div>
         <div class="item">
           <div class="item-titulo">Educación Secundaria</div>
-          <div class="item-sub">I.E. — Puno · 2022</div>
-          <div class="item-desc">Graduada con mención en Ciencias.</div>
+          <div class="item-sub">I.E.S. "A"  · 2021</div>
         </div>
       </div>
       <div class="m-block">
         <div class="m-title">Proyectos</div>
         <div class="item">
-          <div class="item-titulo">Estrés y Comodidad en Parques Urbanos</div>
-          <div class="item-sub">Tesis · UNA Puno · 2025 — 2026</div>
+          <div class="item-titulo">Aplicaciones de análisis estadístico</div>
+          <div class="item-sub">UNA Puno · 2024 — 2026</div>
           <ul class="bullet-list">
-            <li>Análisis de percepción en 4 parques de Puno (300 encuestas).</li>
-            <li>Correlación de Pearson, SPSS y Minitab.</li>
+            <li>Desarrollo de análisis estadísticos con Python, SPSS y EViews.</li>
+            <li>Modelos de regresión y series de tiempo para investigación académica.</li>
           </ul>
         </div>
         <div class="item">
-          <div class="item-titulo">Modelos SARIMA — Colaboración</div>
-          <div class="item-sub">UNA Puno · 2025</div>
+          <div class="item-titulo">Creación de aplicativos web y software</div>
+          <div class="item-sub">UNA Puno · 2025 — 2026</div>
           <ul class="bullet-list">
-            <li>Series de tiempo aplicadas a criminalidad y comercio informal.</li>
+            <li>Desarrollo de páginas web con HTML, CSS y GitHub Pages.</li>
+            <li>Exploración de herramientas para creación de software estadístico.</li>
           </ul>
         </div>
       </div>
       <div class="m-block">
-        <div class="m-title">Cursos destacados</div>
+        <div class="m-title">Intereses a futuro</div>
         <ul class="bullet-list">
-          <li>Econometría y Series de Tiempo — 2025</li>
-          <li>Machine Learning aplicado — 2025</li>
-          <li>Regresión y Análisis Multivariado — 2024</li>
-          <li>Redes y Telecomunicaciones — 2026</li>
+          <li>Especializarse en ciencia de datos e inteligencia artificial aplicada.</li>
+          <li>Desarrollar software estadístico y aplicativos web para análisis de datos.</li>
+          <li>Trabajar en investigación cuantitativa en el sector público o privado.</li>
+          <li>Contribuir al desarrollo tecnológico e informático de la región de Puno.</li>
         </ul>
       </div>
     </div>
