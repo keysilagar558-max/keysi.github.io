@@ -4,258 +4,243 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV — Keysi Salcca Lagar</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-:root {
-  --rosa: #b56060;
-  --rosa-claro: #f0d4d4;
-  --rosa-palido: #faf3f3;
-  --rosa-oscuro: #8a3a3a;
-  --gris: #5a4040;
-  --gris2: #8a7070;
-  --texto: #2a1a1a;
-}
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: #f0e0e0;
+  font-family: 'Poppins', sans-serif;
+  background: #edd8d8;
+  min-height: 100vh;
   display: flex; justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh; padding: 40px 20px;
+  padding: 40px 20px;
 }
 .cv {
-  width: 820px; background: white;
-  box-shadow: 0 20px 60px rgba(138,58,58,0.15);
-  border-radius: 4px; overflow: hidden;
-  display: grid; grid-template-columns: 260px 1fr;
+  width: 750px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(120,60,60,0.15);
+}
+.header {
+  background: #9a4a4a;
+  padding: 40px 44px;
+  display: flex; align-items: center; gap: 32px;
+}
+.avatar {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  background: #c47a7a;
+  border: 3px solid rgba(255,255,255,0.4);
+  display: flex; align-items: flex-end; justify-content: center;
+  overflow: hidden; flex-shrink: 0;
+}
+.header-text { color: white; }
+.nombre {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem; line-height: 1.1;
+  margin-bottom: 4px;
+}
+.cargo {
+  font-size: 0.75rem; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 12px;
+}
+.tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.9);
+  padding: 3px 12px; border-radius: 12px;
+  font-size: 0.7rem;
+}
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
 }
 .sidebar {
-  background: var(--rosa-oscuro);
-  padding: 44px 28px; color: white;
+  background: #fdf5f5;
+  padding: 32px 28px;
+  border-right: 1px solid #f0dada;
 }
-.foto-wrap {
-  width: 110px; height: 110px; border-radius: 50%;
-  background: var(--rosa);
-  border: 4px solid rgba(255,255,255,0.3);
-  margin: 0 auto 20px;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.6rem; font-weight: 700; color: white;
-  overflow: hidden;
+.s-block { margin-bottom: 28px; }
+.s-title {
+  font-size: 0.6rem; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600;
+  color: #9a4a4a; margin-bottom: 12px;
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid #e8c8c8;
 }
-.foto-wrap img { width: 100%; height: 100%; object-fit: cover; }
-.sidebar-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem; font-weight: 700;
-  text-align: center; margin-bottom: 4px; line-height: 1.2;
+.s-line {
+  font-size: 0.75rem; color: #5a3535;
+  margin-bottom: 8px; line-height: 1.6;
+  display: flex; gap: 8px; align-items: flex-start;
 }
-.sidebar-cargo {
-  font-size: 0.73rem; text-align: center;
-  color: rgba(255,255,255,0.65);
-  margin-bottom: 32px; letter-spacing: 0.04em;
+.s-line .ico { flex-shrink: 0; }
+.skill-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+.skill {
+  background: #f0dada;
+  color: #7a3535;
+  padding: 3px 11px; border-radius: 10px;
+  font-size: 0.7rem; font-weight: 500;
 }
-.sidebar-section { margin-bottom: 26px; }
-.sidebar-title {
-  font-size: 0.62rem; letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
-  border-bottom: 1px solid rgba(255,255,255,0.12);
-  padding-bottom: 6px; margin-bottom: 14px;
+.main { padding: 32px 32px; }
+.m-block { margin-bottom: 24px; }
+.m-title {
+  font-size: 0.6rem; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 600;
+  color: #9a4a4a; margin-bottom: 12px;
+  padding-bottom: 5px;
+  border-bottom: 1.5px solid #e8c8c8;
 }
-.contact-item {
-  display: flex; align-items: flex-start; gap: 10px;
-  font-size: 0.78rem; color: rgba(255,255,255,0.82);
-  margin-bottom: 10px; line-height: 1.5;
+.item { margin-bottom: 14px; }
+.item-titulo {
+  font-size: 0.85rem; font-weight: 600;
+  color: #3a1515; margin-bottom: 1px;
 }
-.contact-icon { font-size: 0.85rem; margin-top: 1px; flex-shrink: 0; }
-.skill-tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
-.skill-pill {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.85);
-  padding: 4px 12px; border-radius: 14px;
-  font-size: 0.75rem;
+.item-sub {
+  font-size: 0.7rem; color: #9a7070;
+  margin-bottom: 5px; font-weight: 400;
 }
-.idioma {
-  display: flex; justify-content: space-between; align-items: center;
-  font-size: 0.78rem; color: rgba(255,255,255,0.82);
-  margin-bottom: 10px;
+.item-desc {
+  font-size: 0.73rem; color: #5a3535;
+  line-height: 1.7;
 }
-.idioma-dots { display: flex; gap: 4px; }
-.idioma-dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: rgba(255,255,255,0.2);
+.bullet-list { list-style: none; }
+.bullet-list li {
+  font-size: 0.73rem; color: #5a3535;
+  line-height: 1.7; padding-left: 12px;
+  position: relative;
 }
-.idioma-dot.filled { background: rgba(255,255,255,0.8); }
-.main { padding: 44px 36px; background: white; }
-.main-header {
-  border-bottom: 2px solid var(--rosa-claro);
-  padding-bottom: 18px; margin-bottom: 26px;
-}
-.main-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.3rem; font-weight: 700;
-  color: var(--rosa-oscuro); line-height: 1.1;
-}
-.main-cargo {
-  font-size: 0.82rem; color: var(--gris2);
-  font-weight: 300; letter-spacing: 0.06em; margin-top: 4px;
-}
-.main-section { margin-bottom: 24px; }
-.main-title {
-  font-size: 0.62rem; letter-spacing: 0.2em;
-  text-transform: uppercase; color: var(--rosa);
-  border-left: 3px solid var(--rosa);
-  padding-left: 10px; margin-bottom: 12px; font-weight: 500;
-}
-.sobre { font-size: 0.84rem; line-height: 1.8; color: var(--gris); }
-.timeline-item { margin-bottom: 16px; }
-.timeline-header {
-  display: flex; justify-content: space-between;
-  align-items: flex-start; margin-bottom: 2px;
-}
-.timeline-titulo { font-size: 0.88rem; font-weight: 500; color: var(--texto); }
-.timeline-fecha {
-  font-size: 0.7rem; color: var(--rosa);
-  background: var(--rosa-palido);
-  padding: 2px 10px; border-radius: 10px;
-  white-space: nowrap; flex-shrink: 0;
-}
-.timeline-lugar { font-size: 0.76rem; color: var(--gris2); margin-bottom: 4px; }
-.timeline-desc { font-size: 0.78rem; color: var(--gris); line-height: 1.7; }
-.soft-grid { display: flex; flex-wrap: wrap; gap: 7px; }
-.soft-tag {
-  background: var(--rosa-palido);
-  border: 1px solid var(--rosa-claro);
-  color: var(--rosa-oscuro);
-  padding: 4px 13px; border-radius: 14px;
-  font-size: 0.76rem; font-weight: 500;
+.bullet-list li::before {
+  content: '·'; position: absolute; left: 0;
+  color: #c47a7a; font-size: 1rem; line-height: 1.4;
 }
 @media print {
   body { background: white; padding: 0; }
-  .cv { box-shadow: none; }
+  .cv { box-shadow: none; border-radius: 0; }
 }
 </style>
 </head>
 <body>
 <div class="cv">
-  <div class="sidebar">
-    <div class="foto-wrap">KS</div>
-    <div class="sidebar-name">Keysi Salcca Lagar</div>
-    <div class="sidebar-cargo">Estudiante · Ing. Estadística e Informática</div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-title">Contacto</div>
-      <div class="contact-item"><span class="contact-icon">📍</span> Puno, Perú</div>
-      <div class="contact-item"><span class="contact-icon">📧</span> keysi.salcca@est.unap.edu.pe</div>
-      <div class="contact-item"><span class="contact-icon">📱</span> +51 987 654 321</div>
-      <div class="contact-item"><span class="contact-icon">🐙</span> github.com/keysilagar558-max</div>
-      <div class="contact-item"><span class="contact-icon">📸</span> @keysi_salcca</div>
+  <div class="header">
+    <div class="avatar">
+      <svg width="94" height="94" viewBox="0 0 94 94" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="47" cy="94" r="36" fill="#b06060"/>
+        <circle cx="47" cy="38" r="20" fill="#f0d0b0"/>
+        <path d="M28 35 Q30 18 47 16 Q64 18 66 35 Q63 24 47 23 Q31 24 28 35Z" fill="#3a1a0a"/>
+        <path d="M28 35 Q24 50 27 60 Q29 46 32 40Z" fill="#3a1a0a"/>
+        <path d="M66 35 Q70 50 67 60 Q65 46 62 40Z" fill="#3a1a0a"/>
+        <ellipse cx="39" cy="39" rx="3" ry="3.5" fill="white"/>
+        <ellipse cx="55" cy="39" rx="3" ry="3.5" fill="white"/>
+        <circle cx="40" cy="40" r="2" fill="#2a1005"/>
+        <circle cx="56" cy="40" r="2" fill="#2a1005"/>
+        <path d="M43 47 Q47 51 51 47" stroke="#c06050" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="36" cy="45" r="4" fill="#e89080" opacity="0.3"/>
+        <circle cx="58" cy="45" r="4" fill="#e89080" opacity="0.3"/>
+        <rect x="28" y="19" width="38" height="5" rx="1.5" fill="#2a0a0a"/>
+        <rect x="34" y="13" width="26" height="7" rx="2" fill="#1a0505"/>
+        <line x1="60" y1="16" x2="66" y2="26" stroke="#c8902a" stroke-width="1.5"/>
+        <circle cx="66" cy="27" r="2.5" fill="#c8902a"/>
+        <path d="M27 60 Q20 70 18 94 L47 88 L76 94 Q74 70 67 60 L47 55Z" fill="#6a2020"/>
+        <path d="M38 55 L47 66 L56 55 Q50 59 47 57 Q44 59 38 55Z" fill="#8a3535"/>
+        <rect x="54" y="76" width="18" height="13" rx="2" fill="#f5e8d0" transform="rotate(-8 63 82)"/>
+        <circle cx="73" cy="86" r="3" fill="#c8902a" opacity="0.8"/>
+      </svg>
     </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-title">Habilidades</div>
-      <div class="skill-tag-list">
-        <span class="skill-pill">Excel</span>
-        <span class="skill-pill">SPSS</span>
-        <span class="skill-pill">Minitab</span>
-        <span class="skill-pill">EViews</span>
-        <span class="skill-pill">Python</span>
-        <span class="skill-pill">GitHub</span>
-        <span class="skill-pill">Estadística</span>
-        <span class="skill-pill">Series de Tiempo</span>
-        <span class="skill-pill">Regresión</span>
-      </div>
-    </div>
-
-    <div class="sidebar-section">
-      <div class="sidebar-title">Idiomas</div>
-      <div class="idioma">Español
-        <div class="idioma-dots">
-          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
-          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
-          <div class="idioma-dot filled"></div>
-        </div>
-      </div>
-      <div class="idioma">Quechua
-        <div class="idioma-dots">
-          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
-          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
-          <div class="idioma-dot"></div>
-        </div>
-      </div>
-      <div class="idioma">Inglés
-        <div class="idioma-dots">
-          <div class="idioma-dot filled"></div><div class="idioma-dot filled"></div>
-          <div class="idioma-dot filled"></div><div class="idioma-dot"></div>
-          <div class="idioma-dot"></div>
-        </div>
+    <div class="header-text">
+      <div class="nombre">Keysi Salcca Lagar</div>
+      <div class="cargo">Ing. Estadística e Informática · VI Semestre · 2026</div>
+      <div class="tags">
+        <span class="tag">UNA Puno</span>
+        <span class="tag">Análisis de datos</span>
+        <span class="tag">Investigación</span>
       </div>
     </div>
   </div>
 
-  <div class="main">
-    <div class="main-header">
-      <div class="main-name">Keysi Salcca<br>Lagar</div>
-      <div class="main-cargo">Ingeniería Estadística e Informática · VI Semestre · 2026</div>
-    </div>
-
-    <div class="main-section">
-      <div class="main-title">Perfil profesional</div>
-      <p class="sobre">Estudiante de VI semestre de Ingeniería Estadística e Informática en la Universidad Nacional del Altiplano de Puno. Con formación en análisis estadístico, series de tiempo, econometría y programación aplicada. Persona responsable, puntual y comprometida, con capacidad para trabajar en equipo y orientada a la investigación cuantitativa.</p>
-    </div>
-
-    <div class="main-section">
-      <div class="main-title">Educación</div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <div class="timeline-titulo">Ingeniería Estadística e Informática</div>
-          <div class="timeline-fecha">2023 — Actualidad</div>
-        </div>
-        <div class="timeline-lugar">Universidad Nacional del Altiplano — Puno, Perú</div>
-        <div class="timeline-desc">VI Semestre. Cursos: Econometría, Series de Tiempo, Regresión, Machine Learning, Redes y Telecomunicaciones.</div>
+  <div class="body">
+    <div class="sidebar">
+      <div class="s-block">
+        <div class="s-title">Contacto</div>
+        <div class="s-line"><span class="ico">📧</span> keysilagar558@gmail.com</div>
+        <div class="s-line"><span class="ico">📱</span> 970 239 921</div>
+        <div class="s-line"><span class="ico">🐙</span> github.com/keysilagar558-max</div>
+        <div class="s-line"><span class="ico">📍</span> Puno, Perú</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <div class="timeline-titulo">Educación Secundaria</div>
-          <div class="timeline-fecha">— 2022</div>
+      <div class="s-block">
+        <div class="s-title">Habilidades</div>
+        <div class="skill-wrap">
+          <span class="skill">Excel</span>
+          <span class="skill">SPSS</span>
+          <span class="skill">Minitab</span>
+          <span class="skill">EViews</span>
+          <span class="skill">Python</span>
+          <span class="skill">GitHub</span>
+          <span class="skill">Regresión</span>
+          <span class="skill">Series de Tiempo</span>
         </div>
-        <div class="timeline-lugar">I.E. — Puno</div>
-        <div class="timeline-desc">Graduada con mención en Ciencias.</div>
       </div>
-    </div>
-
-    <div class="main-section">
-      <div class="main-title">Proyectos</div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <div class="timeline-titulo">Investigación: Estrés y Comodidad en Parques</div>
-          <div class="timeline-fecha">2025 — 2026</div>
-        </div>
-        <div class="timeline-lugar">UNA Puno · Proyecto de tesis</div>
-        <div class="timeline-desc">Análisis estadístico de percepción (estrés, comodidad, ruido) en 4 parques de Puno usando SPSS, Minitab y Correlación de Pearson.</div>
+      <div class="s-block">
+        <div class="s-title">Idiomas</div>
+        <div class="s-line">🇵🇪 Español — Nativo</div>
+        <div class="s-line">🌿 Quechua — Avanzado</div>
+        <div class="s-line">🇺🇸 Inglés — Intermedio</div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <div class="timeline-titulo">Apoyo en análisis de datos</div>
-          <div class="timeline-fecha">2025</div>
-        </div>
-        <div class="timeline-lugar">UNA Puno</div>
-        <div class="timeline-desc">Colaboración en modelos SARIMA aplicados a datos de criminalidad y comercio informal en Puno y Lima.</div>
+      <div class="s-block">
+        <div class="s-title">Valores</div>
+        <div class="s-line">· Responsabilidad</div>
+        <div class="s-line">· Trabajo en equipo</div>
+        <div class="s-line">· Compromiso</div>
+        <div class="s-line">· Puntualidad</div>
       </div>
     </div>
 
-    <div class="main-section">
-      <div class="main-title">Competencias personales</div>
-      <div class="soft-grid">
-        <span class="soft-tag">Responsabilidad</span>
-        <span class="soft-tag">Trabajo en equipo</span>
-        <span class="soft-tag">Puntualidad</span>
-        <span class="soft-tag">Compromiso</span>
-        <span class="soft-tag">Honestidad</span>
-        <span class="soft-tag">Proactividad</span>
-        <span class="soft-tag">Comunicación</span>
-        <span class="soft-tag">Adaptabilidad</span>
+    <div class="main">
+      <div class="m-block">
+        <div class="m-title">Sobre mí</div>
+        <p class="item-desc">Estudiante de VI semestre apasionada por el análisis de datos y la investigación estadística. Responsable, proactiva y comprometida con cada proyecto que emprendo.</p>
+      </div>
+      <div class="m-block">
+        <div class="m-title">Educación</div>
+        <div class="item">
+          <div class="item-titulo">Ing. Estadística e Informática</div>
+          <div class="item-sub">Universidad Nacional del Altiplano · Puno · 2023 — Actualidad</div>
+          <div class="item-desc">VI Semestre. Econometría, Series de Tiempo, Machine Learning, Regresión.</div>
+        </div>
+        <div class="item">
+          <div class="item-titulo">Educación Secundaria</div>
+          <div class="item-sub">I.E. — Puno · 2022</div>
+          <div class="item-desc">Graduada con mención en Ciencias.</div>
+        </div>
+      </div>
+      <div class="m-block">
+        <div class="m-title">Proyectos</div>
+        <div class="item">
+          <div class="item-titulo">Estrés y Comodidad en Parques Urbanos</div>
+          <div class="item-sub">Tesis · UNA Puno · 2025 — 2026</div>
+          <ul class="bullet-list">
+            <li>Análisis de percepción en 4 parques de Puno (300 encuestas).</li>
+            <li>Correlación de Pearson, SPSS y Minitab.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item-titulo">Modelos SARIMA — Colaboración</div>
+          <div class="item-sub">UNA Puno · 2025</div>
+          <ul class="bullet-list">
+            <li>Series de tiempo aplicadas a criminalidad y comercio informal.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="m-block">
+        <div class="m-title">Cursos destacados</div>
+        <ul class="bullet-list">
+          <li>Econometría y Series de Tiempo — 2025</li>
+          <li>Machine Learning aplicado — 2025</li>
+          <li>Regresión y Análisis Multivariado — 2024</li>
+          <li>Redes y Telecomunicaciones — 2026</li>
+        </ul>
       </div>
     </div>
   </div>
